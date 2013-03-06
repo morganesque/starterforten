@@ -1,0 +1,83 @@
+body {
+    @include baseline-grid-background(24px, #FF0000);
+}
+
+$baseFontSize: 16;
+$baseline: 24;
+
+/* Convert PX units to EMs.
+Ex: margin-right: pem(16);
+*/
+@function pem($pxval, $base: $baseFontSize) 
+{
+    @return #{$pxval / $base}em;
+}
+
+body {
+    font-size:$baseFontSize; /* 10 * 1.618 */ 
+    line-height:1.5em; /* 24*/
+    font-family:Helvetica, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+h1,h2,h3,h4,p {
+    margin:0;
+    background-color:rgba(100,100,100,0.2);
+    outline:1px solid blue;
+}
+p {
+    line-height:pem(24,$baseFontSize);
+    padding-top:pem(6,$baseFontSize);;
+    padding-bottom:pem(18,$baseFontSize);
+}
+@mixin fontAlpha { // H1
+    $size: 122.968;
+    font-size:pem($size,16);
+    line-height:pem(120,$size);
+    padding-top:pem(18,$size);;
+    padding-bottom:pem(6,$size);
+    //    
+    font-style:normal;
+    font-weight:bold;        
+}
+@mixin fontBeta { // H2
+    $size: 76;
+    font-size:pem($size,16);
+    line-height:pem(72,$size);
+    padding-top:pem(8,$size);;
+    padding-bottom:pem(16,$size);
+    //
+    font-style:normal;
+    font-weight:bold;
+}
+@mixin fontGamma { // H3
+    $size: 46.972;
+    font-size:pem($size,16);
+    line-height:pem(48,$size);
+    padding-top:pem(8,$size);;
+    padding-bottom:pem(16,$size);
+    //
+    font-style:normal;
+    font-weight:normal;
+}
+@mixin fontDelta { // H4
+    $size: 29.031;
+    font-size:pem($size,16);
+    line-height:pem(24,$size);
+    padding-top:pem(2,$size);;
+    padding-bottom:pem(23,$size);
+    //
+    font-style:normal;
+    font-weight:normal;
+}
+h1, .alpha {
+    @include fontAlpha;
+}
+h2, .beta {
+    @include fontBeta;
+}
+h3, .gamma {  
+    @include fontGamma;
+}
+h4,.delta   {
+    @include fontDelta;
+}
