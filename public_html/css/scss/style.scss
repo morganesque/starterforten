@@ -1,36 +1,24 @@
-@import "compass/layout/grid-background";
-@import "compass/css3/border-radius";
-@import "compass/css3/box-shadow";
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**
+ *
+ * sass --watch style.scss:style.min.css --style compressed
+ *
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
 
-@mixin inline-hack {
-    /* cross browser inline-block */
-    display:-moz-inline-stack;
-    display:inline-block;
-    zoom:1;
-    *display:inline;
-    /* cross browser inline-block */
-    vertical-align:top;
-}
 
-@mixin inline-block-parent()
-{
-    &:after {
-        display: inline-block;
-        width: 100%;
-        content: '.';
-        font-size: 0;
-        height: 0;
-        line-height: 0;
-        visibility: hidden;
-    }
-}
+/**
+ * Setup
+ */
+@import "vars";
+@import "inuit.css/inuit";
 
-//@import "_1reset.scss" ;      // reset / clearfix / starting point.
-@import "_1normalize.scss" ;    // reset / clearfix / starting point.
-@import "_1useful.scss" ;       // reset / clearfix / starting point.
-@import "_2fonts.scss" ;        // Setting up the font faces, sizes, weights etc.
-@import "_3shared.scss" ;       // Really small rulesets that are very specific.
-@import "_4objects.scss" ;      // Incredibly generic, will only ever be extended (thus need to appear early).
-@import "_5generic.scss" ;      // Begin styling elements like headings, paragraphs, tables, lists etc. No classes. 
-@import "_6specific.scss" ;     // Here we actually start to build particular things like navs, image galleries etc.
-@import "_7helpers.scss" ;      // These classes override all other styles (error states, content hiders etc).
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */
+@import "tom";
