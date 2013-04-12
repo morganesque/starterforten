@@ -12,7 +12,7 @@ Mostly this is nicked from HTML5 Boilerplate.
 
 I've taken some of the basic HTML template and the various meta-tag and icons etc. Oh and the .htaccess file that they have which is AWESOME! ;-) They also use a lot of good standard stuff like the IE conditional comment on the HTML tag and stuff like that. I've got some HTML polyfill things (and even belatedPNG - remember that?!) in at the bottom and some boilerplate Google Analytics code (as a reminder as much as anything).
 
-## Inuit.css
+## CSS
 
 <http://inuitcss.com/>
 
