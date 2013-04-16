@@ -1,6 +1,10 @@
+/*! CSSrefresh v1.0.1 */	
+/*
+	I've hacked this so as long as there's jQuery it'll 
+	only refresh the <link>'d stylesheets that have 
+	data-fresh="true" assigned to them.
+*/
 /*	
- *	CSSrefresh v1.0.1
- *	
  *	Copyright (c) 2012 Fred Heusschen
  *	www.frebsite.nl
  *
@@ -116,23 +120,24 @@
 			return f + '?x=' + Math.random();
 		};
 
-
 		var files = document.getElementsByTagName( 'link' ),
 			links = [];
 
 		for ( var a = 0, l = files.length; a < l; a++ )
-		{			
-			var elem = files[ a ],
-				rel = elem.rel;
-			if ( typeof rel != 'string' || rel.length == 0 || rel == 'stylesheet' )
+		{						
+			var elem = files[ a ], rel = elem.rel, fresh = true;			
+
+			if (typeof jQuery !== "undefined") fresh = jQuery(elem).data('fresh');
+			 
+			if (fresh == true)
 			{
-				links.push({
-					'elem' : elem,
-					'href' : this.getHref( elem ),
-					'last' : false
-				});
+				if ( typeof rel != 'string' || rel.length == 0 || rel == 'stylesheet' )
+				{
+					links.push({'elem' : elem, 'href' : this.getHref( elem ), 'last' : false });
+				}
 			}
 		}
+
 		this.reloadFile( links );
 	};
 
