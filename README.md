@@ -14,15 +14,15 @@ I've taken some of the basic HTML template and the various meta-tag and icons et
 
 ## CSS
 
-Right I used to have <http://inuitcss.com/> in here, but I've removed it for now. I still really like it but for some of the littler projects and things I've been doing it was more than I needed. Rather than spend a lot of time removing bits of it I thought I'd start without it and add it back in when needed.
+Right I used to have [Inuit.css](http://inuitcss.com/) in here, but I've removed it for now. I still really like it but for some of the littler projects and things I've been doing it was more than I needed. Rather than spend a lot of time removing bits of it I thought I'd start without it and add it back in when needed.
 
-I still use Harry's ([CSSWizzardryGrids](https://github.com/csswizardry/csswizardry-grids)) which are an excellent off-shoot of Inuit.css and still the favourite CSS grid system I've found so far.
+I still use [Harry](http://csswizardry.com/)'s [CSSWizardry-Grids](https://github.com/csswizardry/csswizardry-grids) which are an excellent off-shoot of Inuit.css and still the favourite CSS grid system I've found so far.
 
 As well as that I use: 
 - Normalize <http://necolas.github.io/normalize.css/>
 - Typeplate <http://typeplate.com/>
 
-Also I'm a big fan of ([SMACSS](http://smacss.com/)) which although I don't always follow religiously is definitely on my list of "things I must try harder at".
+Also I'm a big fan of [SMACSS](http://smacss.com/) which although I don't always follow religiously is definitely on my list of "things I must try harder at". So I've started putting in placeholder SCSS files for the different elements of that.
 
 ## Javascript
 
