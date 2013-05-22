@@ -1,10 +1,6 @@
 /*! CSSrefresh v1.0.1 */	
-/*
-	I've hacked this so as long as there's jQuery it'll 
-	only refresh the <link>'d stylesheets that have 
-	data-fresh="true" assigned to them.
-*/
-/*	
+/*	CSSrefresh v1.0.1
+ *	
  *	Copyright (c) 2012 Fred Heusschen
  *	www.frebsite.nl
  *
@@ -14,6 +10,8 @@
  */
 
 (function() {
+
+    var timeToWait = 1000;
 
 	var phpjs = {
 
@@ -85,7 +83,7 @@
 	var cssRefresh = function() {
 
 		this.reloadFile = function( links )
-		{
+		{		  
 			for ( var a = 0, l = links.length; a < l; a++ )
 			{
 				var link = links[ a ],
@@ -98,6 +96,9 @@
 					if ( link.last != newTime )
 					{
 						//	reload
+						var now = new Date();
+						var not = now.to24hourString();
+						console.log('updated: '+not+ ' '+link.href);
 						link.elem.setAttribute( 'href', this.getRandom( link.href ) );
 					}
 				}
@@ -108,7 +109,7 @@
 			setTimeout( function()
 			{
 				this.reloadFile( links );
-			}, 1000 );
+			}, timeToWait );
 		};
 
 		this.getHref = function( f )
@@ -120,24 +121,28 @@
 			return f + '?x=' + Math.random();
 		};
 
+
 		var files = document.getElementsByTagName( 'link' ),
 			links = [];
 
 		for ( var a = 0, l = files.length; a < l; a++ )
-		{						
-			var elem = files[ a ], rel = elem.rel, fresh = true;			
-
-			if (typeof jQuery !== "undefined") fresh = jQuery(elem).data('fresh');
-			 
-			if (fresh == true)
+		{			
+			var elem = files[ a ],
+				rel = elem.rel;		
+				
+            var live = elem.getAttribute('live');
+				
+			if ( live=='true' && (typeof rel != 'string' || rel.length === 0 || rel == 'stylesheet' ))
 			{
-				if ( typeof rel != 'string' || rel.length == 0 || rel == 'stylesheet' )
-				{
-					links.push({'elem' : elem, 'href' : this.getHref( elem ), 'last' : false });
-				}
+    			var href = this.getHref( elem );
+                console.log('CSSRefresh: '+href);    			     			     
+				links.push({
+					'elem' : elem,
+					'href' : href,
+					'last' : false
+				});
 			}
 		}
-
 		this.reloadFile( links );
 	};
 
