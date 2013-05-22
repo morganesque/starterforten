@@ -14,7 +14,7 @@ I've taken some of the basic HTML template and the various meta-tag and icons et
 
 ## CSS
 
-Right I used to have [Inuit.css](http://inuitcss.com/) in here, but I've removed it for now. I still really like it but for some of the littler projects and things I've been doing it was more than I needed. Rather than spend a lot of time removing bits of it I thought I'd start without it and add it back in when needed.
+I used to have [Inuit.css](http://inuitcss.com/) in here, but I've removed it for now. I still really like it but for some of the littler projects and things I've been doing it was more than I needed. Rather than spend a lot of time removing bits of it I thought I'd start without it and add it back in when needed.
 
 I still use [Harry](http://csswizardry.com/)'s [CSSWizardry-Grids](https://github.com/csswizardry/csswizardry-grids) which are an excellent off-shoot of Inuit.css and still the favourite CSS grid system I've found so far.
 
