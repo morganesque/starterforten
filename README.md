@@ -14,9 +14,15 @@ I've taken some of the basic HTML template and the various meta-tag and icons et
 
 ## CSS
 
-<http://inuitcss.com/>
+Right I used to have <http://inuitcss.com/> in here, but I've removed it for now. I still really like it but for some of the littler projects and things I've been doing it was more than I needed. Rather than spend a lot of time removing bits of it I thought I'd start without it and add it back in when needed.
 
-Secondly there's inuit.css (by [Harry Roberts](https://twitter.com/csswizardry)) which I've recently stuck in there (replacing a ragtag bunch of CSS bits and pieces which I used to have). It seems really cool and it's bound to be better thought-out than the stuff I was using before. So this is partly a learning thing. I may move on (or more likely hack it up) later so don't expect what's in there to be a real, approved (or even working) version of Inuit.
+I still use Harry's ([CSSWizzardryGrids](https://github.com/csswizardry/csswizardry-grids)) which are an excellent off-shoot of Inuit.css and still the favourite CSS grid system I've found so far.
+
+As well as that I use: 
+- Normalize <http://necolas.github.io/normalize.css/>
+- Typeplate <http://typeplate.com/>
+
+Also I'm a big fan of ([SMACSS](http://smacss.com/)) which although I don't always follow religiously is definitely on my list of "things I must try harder at".
 
 ## Javascript
 
