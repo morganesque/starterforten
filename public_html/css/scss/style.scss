@@ -3,27 +3,15 @@
 /*------------------------------------*\
     STYLE.CSS
 \*------------------------------------*/
-/**
- *
- * sass --watch style.scss:style.min.css --style compressed
- *
- * Here we pull in some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
-
 
 /**
  * Setup
  */
-// @import "vars";
-// @import "inuit.css/inuit";
-
+@import "vars";
 
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
-@import "normalize";
-@import "typeplate";
 @import "base";
 @import "layout";
 // @import "module_";
