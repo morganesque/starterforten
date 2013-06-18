@@ -33,7 +33,7 @@
 
 $weight: normal;
 $line-height: 1.65;
-$font-size: 112.5; // percentage value (16 * 112.5% = 18px)
+$font-size: 100; // percentage value (16 * 112.5% = 18px)
 $font-base: 16 * ($font-size/100); // converts our percentage to a pixel value
 $measure: $font-base * $line-height;
 $font-family: Helvetica, Arial, serif;
@@ -71,15 +71,15 @@ $amp-font-family: Verdana, sans-serif;
 // $TypeScale
 // -------------------------------------//
 
-$tera: 142; 
-$giga: 118; 
-$mega: 76; 
-$alpha: 63; 
-$beta: 40; 
-$gamma: 33; 
-$delta: 21; 
-$epsilon: 18; 
-$zeta: 11; 
+$tera: 72; 
+$giga: 54; 
+$mega: 48; 
+$alpha: 36; 
+$beta: 32; 
+$gamma: 24; 
+$delta: 21.33; 
+$epsilon: 16; 
+$zeta: 14.22; 
 
 
 // $TypeScale Unit
